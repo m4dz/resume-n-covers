@@ -1,0 +1,77 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+% m4dz's CV/Resume
+% https://m4dz.net/resume.pdf
+% https://github.com/m4dz/resume-n-covers
+%
+% Author:
+% m4dz <contact+me@m4dz.net> (https://m4dz.net)
+%
+% License:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size
+\documentclass[11pt, a4paper]{awesome-cv}
+
+\usepackage[english]{babel}
+
+% Fonts
+\newfontfamily\headerfont[
+  Path=fonts/,
+  UprightFont=Sinzano-Regular
+]{Sinzano}
+\newfontfamily\headerfontlight[
+  Path=fonts/,
+  UprightFont=Sinzano-Regular
+]{Sinzano}
+\newfontfamily\footerfont[
+  Path=fonts/,
+  UprightFont=Sinzano-Regular
+]{Sinzano}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+\colorlet{awesome}{awesome-skyblue}
+\setbool{acvSectionColorHighlight}{true}
+
+% Social information separator
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\photo[circle,noedge,left]{./m4dz-2016-L.jpg}
+\name{Hi, I'm}{m4dz}
+\position{technical facilitator}
+\address{204 avenue du Maine \cdotp 75014 Paris \cdotp FR}
+
+\mobile{(+33) 6 13 12 73 75}
+\email{contact+me@m4dz.net}
+\homepage{www.m4dz.net}
+\github{m4dz}
+\linkedin{m4d-z}
+\twitter{m4d\_z}
+\skype{m4dz.net}
+%
+% \quote{and so, you want to know more about me?}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader[R]
+\makecvfooter
+  {}
+  {PGP ~ 0xD4627C417D969710}
+  {}
+
+%-------------------------------------------------------------------------------
+\end{document}
