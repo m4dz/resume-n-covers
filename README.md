@@ -1,5 +1,6 @@
-[![Creative Commons 
+[![Creative Commons
 License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![m4dz's resume](https://img.shields.io/badge/resume-pdf-green.svg)](https://raw.githubusercontent.com/m4dz/resume-n-covers/master/output/resume.pdf)
 
 
 m4dz's Resume and Covers

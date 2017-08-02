@@ -1,0 +1,116 @@
+% m4dz's CV/Resume/Covers commons settings for Awesome-CV class
+%
+% Author:
+% m4dz <contact+me@m4dz.net> (https://m4dz.net)
+%
+% License:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+
+% Identify this package.
+\ProvidesPackage{m4dzSettings}[2017/08/01 v1.0.0 m4dz's resume and covers commons settings]
+
+% Colors
+\usepackage{color}
+\definecolor{congressBlue}{rgb}{0.0, 0.31, 0.55}
+\definecolor{alabaster}{rgb}{0.97, 0.97, 0.97}
+\definecolor{mercury}{rgb}{0.91, 0.91, 0.91}
+\definecolor{crimson}{rgb}{0.86, 0.08, 0.24}
+\definecolor{teal}{rgb}{0.0, 0.5, 0.5}
+
+% Links
+\hypersetup{
+  colorlinks=true,
+  linkcolor=congressBlue,
+  urlcolor=congressBlue
+}
+
+% Fonts
+\usepackage{fontspec}
+\fontdir[fonts/]
+\newfontfamily\headerfont[
+  Path=\@fontdir,
+  UprightFont=Sinzano-Regular
+]{Sinzano}
+\newfontfamily\bodyfont[
+  Path=\@fontdir,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+]{GandhiSerif}
+\newfontfamily\bodyfontlight[
+  Path=\@fontdir,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+]{GandhiSerif}
+\newfontfamily\footerfont[
+  Path=\@fontdir,
+  UprightFont=Sinzano-Regular
+]{Sinzano}
+\newfontfamily\inputfont[
+  Path=\@fontdir,
+  UprightFont=InputMonoCondensed-Light
+]{Input}
+
+\setmonofont{Input}
+
+% Code
+\usepackage{listings}
+\lstdefinelanguage{JavaScript}{
+  morekeywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, const, let, if, in, while, do, else, case, break},
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  morestring=[b]",
+  morestring=[b]'
+}
+
+\lstset{
+    % Basic design
+    backgroundcolor=\color{alabaster},
+    basicstyle={\fontsize{9pt}{1em}\ttfamily},
+    % frame
+    frame=single,
+    framesep=5pt,
+    rulecolor=\color{mercury},
+    % highlighting
+    keywordstyle=\color{black}\bfseries,
+    commentstyle=\color{darkgray}\ttfamily,
+    identifierstyle=\color{teal},
+    stringstyle=\color{crimson},
+    % Code
+    language=JavaScript,
+    alsodigit={.:;},
+    tabsize=2,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true
+}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=1cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+\colorlet{awesome}{congressBlue}
+\setbool{acvSectionColorHighlight}{true}
+
+% Social information separator
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% Styles
+\renewcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\color{graytext} #1}}
+\renewcommand*{\headerpositionstyle}[1]{{\fontsize{16pt}{1.25em}\headerfont\color{awesome} #1}}
+\renewcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{2em}\sourcesanspro\itshape\color{lighttext} #1}}
+\renewcommand*{\headersocialstyle}[1]{{\hypersetup{hidelinks=true}\fontsize{6.8pt}{2em}\sourcesanspro\color{text} #1}}
+\renewcommand*{\sectionstyle}[1]{{\fontsize{22pt}{1em}\headerfont\bfseries\color{text}\@sectioncolor #1}}
+\renewcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\headerfont\textcolor{text}{#1}}}
+\renewcommand*{\paragraphstyle}{\fontsize{10pt}{1.2em}\bodyfontlight\upshape\color{text}}
+
+% Spaces
+\newcommand{\msetCventryBottomSkip}{1.5mm}
+\renewcommand{\acvSectionTopSkip}{4mm}
+\renewcommand{\acvSectionContentTopSkip}{3mm}
